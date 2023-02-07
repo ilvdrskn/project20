@@ -18,6 +18,11 @@
     src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: PlusBold;
+    src: url("./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf");
+}
+
 * {
     box-sizing: border-box;
     margin: 0; padding: 0;
@@ -30,6 +35,7 @@ body {
 
 .main {
     padding: .5em;
+    min-width: 350px;
 }
 
 .container {
@@ -38,8 +44,128 @@ body {
 
 header.container {
     justify-content: space-between;
+    padding: 1em .1em;
+}
+
+h2.notific{
+    font-family: PlusBold;
 }
 
 .notificNumber {
     display: inline-block;
+    padding: 0em .5em;
+    background-color: var(--Blue);
+    color: var(--White);
+    border-radius: 10%;
+}
+
+.main-action {
+    font-size: .8em;
+    color: var(--Grayishblue);
+}
+
+.main-action:hover {
+    cursor: pointer;
+    color: var(--Blue);
+    text-decoration: underline;
+}
+
+main.container {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 2em;
+}
+
+.notification {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--darkgrayishblue);
+    padding: 1em;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.new {
+    background-color: var(--Lightgrayishblue2);
+    border-radius: 10px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1em;
+}
+
+.name {
+    color: var(--Verydarkblue);
+    font-family: PlusBold;
+}
+
+.event {
+    color: var(--Grayishblue);
+    font-family: PlusBold;
+}
+
+.event:hover, .name:hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.mark {
+    background-color: var(--Red);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    position: absolute;
+    right: 5%;
+    display: none;
+}
+
+.new .mark {
+    display: block;
+}
+
+.new:hover {
+    cursor: pointer;
+}
+
+.message {
+    align-self: flex-end;
+    margin: 0 auto;
+    width: 67%;
+    padding: 2em .5em;
+    border: 3px solid var(--Lightgrayishblue2);
+
+}
+
+.text {
+    width: 70%;
+}
+
+.message:hover {
+    background-color: var(--Lightgrayishblue2);
+    cursor: pointer;
+}
+
+img[alt=chess] {
+    position: absolute;
+    right: 10%;
+    width: 50px;
+    height: 50px;
+}
+
+img[alt=chess]:hover {
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+
+    img[alt=chess] {
+        width: 40px;
+        height: 40px;
+    }
 }
